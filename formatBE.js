@@ -1,4 +1,4 @@
-function formatBB(ex, acc) {
+function formatBE(ex, acc) {
         let e = ex.log10().floor()
 		if (ex.lt(1e6)) {
 			return formatShort(ex, acc)
