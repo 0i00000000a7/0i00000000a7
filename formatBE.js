@@ -11,3 +11,7 @@ function formatBE(ex, acc) {
 			return (a.lt(0)?'':m.toFixed(a))+'e'+format(e, 0)
 		}
 }
+function formatShort(ex, acc = 0) {
+	let a = Math.max(acc - Math.max(ex.log10().floor().toNumber(), 0), 0)
+	return a>0?ex.toFixed(a):ex.toFixed(a).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
